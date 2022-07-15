@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM - IndexedDB</title>
+    <link rel="stylesheet" href="css/tailwind.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="min-h-100 bg-gray-200">
+    <div class="md:flex min-h-screen md:align-top">
+        <aside class="md:w-2/5 lg:w-2/5 xl:w-1/5 custom-color px-5 py-10">
+            <a href="index.html">
+                <h2 class="text-white text-2xl">Logo Empresa</h2>
+            </a>
+            <h1 class="uppercase text-white tracking-wide text-2xl  font-bold mt-5 ">CRM</h1>
+            <p class="mt-5 text-white">Administra tus Clientes con el CRM</p>
+            <nav class="mt-8">
+               <a  
+                    href="/" 
+                    class="px-3 py-1 text-white block hover:bg-teal-700   rounded-md"
+                >Clientes</a>
+                <a 
+                    href="nuevo-cliente.html" 
+                    class="px-3 py-1 text-white block hover:bg-teal-900 mt-2  rounded-md bg-teal-700"
+                >Nuevo Cliente</a>
+            </nav>
+        </aside> <!--sidebar-->
+        <main class="md:w-3/5  xl:w-4/5 px-5 py-10 bg-gray-200">
+            <h2 class="text-3xl font-light text-center">Nuevo Cliente</h2>
+
+            <div class="flex flex-col mt-10 items-center">
+                <div class="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 w-10/12 md:w-8/12 lg:w-6/12">
+                    <div class=" shadow overflow-hidden sm:rounded-lg border-b border-gray-200 ">
+                        <form id="formulario" class="bg-white p-3">
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="nombre">Nombre *</label>
+                                <input 
+                                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="nombre"
+                                    name="nombre"
+                                    type="text"
+                                    placeholder="Nombre Cliente"
+                                />
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Correo (opcional)</label>
+                                <input 
+                                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    placeholder="Email Cliente"
+                                />
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="telefono">Teléfono *</label>
+                                <input 
+                                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="telefono"
+                                    name="telefono"
+                                    type="tel"
+                                    placeholder="Teléfono Cliente"
+                                />
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="descripcion">Descripción *</label>
+                                <textarea
+                                class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="descripcion"
+                                name="descripcion"
+                                type="text"
+                                placeholder="Descripción de la producción"
+                                ></textarea>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="fecha-instrumental">Fecha de entrega del instrumental (solo si aplica)</label>
+                                <input 
+                                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="fecha-instrumental"
+                                    name="fecha-instrumental"
+                                    type="date"
+
+                                />
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="fecha-produccion">Fecha de entrega de la producción *</label>
+                                <input 
+                                    class="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="fecha-produccion"
+                                    name="fecha-produccion"
+                                    type="date"
+                                    
+                                />
+                            </div>
+
+
+                            <input
+                                type="submit"
+                                class="bg-teal-600 hover:bg-teal-900 w-full mt-5 p-2 text-white uppercase font-bold cursor-pointer rounded-md"
+                                value="Agregar Cliente"
+                            />
+                           
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script type='module' src="js/nuevocliente.js"></script>
+    <script type='module' src="js/funciones.js"></script>
+</body>
+</html>
